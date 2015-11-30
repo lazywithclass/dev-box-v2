@@ -5,4 +5,4 @@ Rewrote dev-box project to use Ansible instead of Puppet
 
 Run the following command, it will use `sudo`:
 
-`curl https://raw.githubusercontent.com/lazywithclass/dev-box-v2/master/download.sh | bash`
+`wget -O - https://raw.githubusercontent.com/lazywithclass/dev-box-v2/master/download.sh | bash`
