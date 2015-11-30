@@ -1,0 +1,32 @@
+---
+
+- name: Upgrade
+  apt: upgrade=dist
+
+- name: Base packages
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - bash-completion
+    - openssh-server
+    - vim
+    - git
+    - git-core
+    - zsh
+    - curl
+    - wget
+    - htop
+    - tmux
+    - tig
+    - unzip
+    - tar
+    - gzip
+    - bzip2
+
+- name: Java repository
+  apt_repository: repo='ppa:webupd8team/java' state=present update_cache=yes
+
+- name: Java select the license
+  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+
+- name: Java install version 8
+  apt: name=oracle-java8-installer state=installed force=yes
