@@ -18,6 +18,9 @@
     - tar
     - gzip
     - bzip2
+    - virtualbox-guest-dkms 
+    - virtualbox-guest-utils 
+    - virtualbox-guest-x11
 
 - name: Java repository
   apt_repository: repo='ppa:webupd8team/java' state=present update_cache=yes
