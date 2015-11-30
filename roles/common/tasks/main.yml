@@ -13,7 +13,6 @@
     - git-core
     - zsh
     - curl
-    - wget
     - htop
     - tmux
     - tig
