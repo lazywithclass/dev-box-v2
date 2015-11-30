@@ -9,8 +9,6 @@
     - bash-completion
     - openssh-server
     - vim
-    - git
-    - git-core
     - zsh
     - curl
     - htop
