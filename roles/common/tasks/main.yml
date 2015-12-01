@@ -7,20 +7,24 @@
   apt: pkg={{ item }} state=installed
   with_items:
     - bash-completion
-    - openssh-server
-    - vim
-    - zsh
-    - curl
-    - htop
-    - tmux
-    - tig
-    - unzip
-    - tar
-    - gzip
     - bzip2
+    - calibre
+    - curl
+    - gimp
+    - gzip
+    - htop
+    - mplayer
+    - openssh-server
+    - tar
+    - tig
+    - tmux
+    - tree
+    - unzip
+    - vim
     - virtualbox-guest-dkms 
     - virtualbox-guest-utils 
     - virtualbox-guest-x11
+    - zsh
 
 - name: Java repository
   apt_repository: repo='ppa:webupd8team/java' state=present update_cache=yes
