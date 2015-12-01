@@ -5,8 +5,14 @@ Rewrote dev-box project to use Ansible instead of Puppet
 
 Prepare the new machine so that it can download this and the other projects on github: https://help.github.com/articles/generating-ssh-keys/
 
-### Install
+### Fetch this
 
 Run the following command, it will use `sudo`:
 
 `wget -O - https://raw.githubusercontent.com/lazywithclass/dev-box-v2/master/download.sh | bash`
+
+### Run this
+
+Run the following command, it will use `sudo`:
+
+`wget -O - https://raw.githubusercontent.com/lazywithclass/dev-box-v2/master/setup.sh | bash`
