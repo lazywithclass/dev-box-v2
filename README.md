@@ -15,4 +15,5 @@ Run the following command, it will use `sudo`:
 
 Run the following command, it will use `sudo`:
 
-`wget -O - https://raw.githubusercontent.com/lazywithclass/dev-box-v2/master/setup.sh | bash`
+    cd workspace/dev-box-v2 && \
+    wget -O - https://raw.githubusercontent.com/lazywithclass/dev-box-v2/master/setup.sh | bash
