@@ -1,0 +1,8 @@
+---
+
+- hosts: local
+  user: lazywithclass
+  sudo: yes
+
+  roles:
+    - common
