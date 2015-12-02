@@ -1,0 +1,10 @@
+---
+
+- name: Node.js
+
+- name: Download nave
+  get_url: url=https://raw.github.com/isaacs/nave/master/nave.sh dest=/home/lazywithclass/bin/ mode=0744
+
+- shell: /home/lazywithclass/bin/nave.sh
+  args:
+    creates: /usr/local/bin/node
