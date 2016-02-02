@@ -6,3 +6,6 @@
 
   roles:
     - common
+    - nodejs
+    - structure
+    - web

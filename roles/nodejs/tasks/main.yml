@@ -1,0 +1,4 @@
+---
+
+- name: Download nave
+  get_url: url=https://raw.github.com/isaacs/nave/master/nave.sh dest=/home/lazywithclass/bin/ mode=0744 owner=lazywithclass group=lazywithclass

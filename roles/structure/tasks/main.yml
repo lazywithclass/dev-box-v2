@@ -1,0 +1,29 @@
+---
+
+- name: Create bin folder
+  file: path=/home/lazywithclass/bin state=directory owner=lazywithclass group=lazywithclass
+
+- name: Own /usr/local/bin
+  file: path=/usr/local/bin owner=lazywithclass group=lazywithclass
+
+- name: Fetch dotfiles
+  become: yes
+  become_user: lazywithclass
+  git: repo=https://github.com/lazywithclass/dotfiles.git dest=/home/lazywithclass/workspace/dotfiles
+  
+- name: Link zshrc
+  file: src=/home/lazywithclass/workspace/dotfiles/zshrc.sh dest=/home/lazywithclass/.zshrc owner=lazywithclass group=lazywithclass state=link
+
+- name: Link tmux.conf
+  file: src=/home/lazywithclass/workspace/dotfiles/tmux.conf dest=/home/lazywithclass/.tmux.conf owner=lazywithclass group=lazywithclass state=link
+
+- name: Link gitconfig
+  file: src=/home/lazywithclass/workspace/dotfiles/gitconfig dest=/home/lazywithclass/.gitconfig owner=lazywithclass group=lazywithclass state=link
+
+- name: Fetch zsh
+  become: yes
+  become_user: lazywithclass
+  git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=/home/lazywithclass/.oh-my-zsh
+
+
+# TODO clone dotfiles and link .bashrc and other relevant, not spacemacs, that's to be done in the emacs role

@@ -10,6 +10,7 @@
     - bzip2
     - calibre
     - curl
+    - fortune
     - gimp
     - gzip
     - htop
@@ -35,3 +36,4 @@
 
 - name: Java install version 8
   apt: name=oracle-java8-installer state=installed force=yes
+
