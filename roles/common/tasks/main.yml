@@ -17,6 +17,7 @@
     - libssl-dev
     - mplayer
     - openssh-server
+    - python-software-properties
     - tar
     - tig
     - tmux

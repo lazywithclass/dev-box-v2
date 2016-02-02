@@ -1,0 +1,14 @@
+---
+
+- name: Add ppa
+  apt_repository: repo='ppa:ubuntu-elisp/ppa' state=present
+
+- name: Update apt cache
+  apt: update_cache=yes
+
+- name: Install Emacs
+  apt: pkg=emacs-snapshot state=installed
+
+- name: Link Spacemacs
+  file: src=/home/lazywithclass/workspace/dotfiles/spacemacs/spacemacs dest=/home/lazywithclass/.spacemacs owner=lazywithclass group=lazywithclass state=link
+
