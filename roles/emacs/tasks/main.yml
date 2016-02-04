@@ -9,6 +9,10 @@
 - name: Install Emacs
   apt: pkg=emacs-snapshot state=installed
 
-- name: Link Spacemacs
+- name: Link Spacemacs config
   file: src=/home/lazywithclass/workspace/dotfiles/spacemacs/spacemacs dest=/home/lazywithclass/.spacemacs owner=lazywithclass group=lazywithclass state=link
 
+- name: Fetch Spacemacs
+  become: yes
+  become_user: lazywithclass
+  git: repo=https://github.com/syl20bnr/spacemacs dest=/home/lazywithclass/.emacs.d
